@@ -48,7 +48,7 @@
     - 容器使用map集合，存放Bean对象。
 
 
-![02-IoC容器](C:\Users\Mistletoe\Desktop\work\画图\02-IoC容器.png)
+![02-IoC容器](img/02-IoC容器.png)
 
 <center>
     IOC容器在spring中的实现
