@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+    方法一：引入外部bean
+    1. 创建对象：student 和 school
+    2. 在student的标签中，使用property引入school的bean
+    -->
+
+    <bean id="student" class="com.lm.spring6.ditest.Student">
+        <!--普通类型注入-->
+        <property name="name" value="ming"></property>
+        <!--对象类型注入-->
+        <property name="school" ref="school"></property>
+        <!--数组类型注入-->
+        <property name="course">
+            <array>
+                <value>数学</value>
+                <value>英语</value>
+            </array>
+        </property>
+    </bean>
+    <bean id="school" class="com.lm.spring6.ditest.School">
+        <!--普通类型注入-->
+        <property name="name" value="sjtu"></property>
+
+    </bean>
+
+</beans>

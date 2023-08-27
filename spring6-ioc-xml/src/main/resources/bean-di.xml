@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--set 方法注入-->
+    <bean id="book" class="com.lm.spring6.di.Book">
+        <property name="name" value="book1"></property>
+        <property name="author" value="ming"></property>
+    </bean>
+
+    <!--constructor 构造方法注入-->
+    <bean id="bookCon" class="com.lm.spring6.di.Book">
+        <constructor-arg name="name" value="book2"></constructor-arg>
+        <constructor-arg name="author" value="ming"></constructor-arg>
+    </bean>
+
+</beans>
